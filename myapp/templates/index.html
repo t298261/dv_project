@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<table class="table table-striped table-hover table-bordered">
+
+    <tbody>
+
+
+      <tr>
+        <!--To Form 1 -->
+       <td class="align-middle"><div  style="text-align:center"> 
+        <h5> Welcome, {{user}}, to your profile page.</h5>
+        <h7>Please, choose a Safety Plan to complete.</h7>
+        <h10>Scroll down for more; there are eight plans total.</h10>
+   
+        </div></td>
+  </tbody>
+
+  <tbody>
+      <tr>
+        <!--To Form 1 -->
+       <td class="align-middle"><div  style="text-align:center">
+          <a href="{%  url 'step1_page'  %}">
+          <button class='wrap_button' >A Violent Incident</button>
+          </a>
+        </div></td>
+  </tbody>
+      <!-- to Form 2 -->
+  <tbody>
+        <td class="align-middle"><div  style="text-align:center">
+          <a href="{%  url 'step2_page'  %}">
+          <button class='wrap_button' >Safety when preparing to leave.</button>
+          </a>
+        </div></td>
+  </tbody>
+
+      <!-- to Form 3 -->
+  <tbody>
+        <td class="align-middle"><div  style="text-align:center">
+          <a href="{%  url 'step3_page'  %}">
+          <button class='wrap_button' >Safety in my own residence.</button>
+          </a>
+        </div></td>
+  </tbody>
+
+      <!-- to Form  4-->
+
+  <tbody>
+        <td class="align-middle"><div  style="text-align:center">
+          <a href="{%  url 'step4_page'  %}">
+          <button class='wrap_button' >Safety with a Protection/Restraining Order</button>
+          </a>
+        </div></td>
+  </tbody>
+
+      <!-- to Form 5-->
+
+  <tbody>
+        <td class="align-middle"><div  style="text-align:center">
+          <a href="{%  url 'step5_page'  %}">
+          <button class='wrap_button' >Safety on the job and in public.</button>
+          </a>
+        </div></td>
+  </tbody>
+
+      <!-- to Form 6-->
+
+  <tbody>
+        <td class="align-middle"><div  style="text-align:center">
+          <a href="{%  url 'step6_page'  %}">
+          <button class='wrap_button' >Safety and Drug or Alcohol use</button>
+          </a>
+        </div></td>
+  </tbody>
+
+
+      <!-- Column 7 -->
+
+  <tbody>
+        <td class="align-middle"><div  style="text-align:center">
+          <a href="{%  url 'step7_page'  %}">
+          <button class='wrap_button' >Safety and my emotional health</button>
+          </a>
+        </div></td>
+  </tbody>
+
+      <!-- Column 8 -->
+
+  <tbody>
+        <td class="align-middle"><div  style="text-align:center">
+          <a href="{%  url 'step8_page'  %}">
+          <button class='wrap_button' >Items to take when leaving</button>
+          </a>
+        </div></td>
+  </tbody>
+
+
+   </tbody>
+</table>
+
+
+{% endblock %}
+
+

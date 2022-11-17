@@ -1,0 +1,40 @@
+{% load static %}
+
+
+
+<nav class="navbar navbar-dark" style="background-color: #b98fb6;">
+  <div class="container-fluid">
+
+    <div><a class="navbar-brand" href="{% url 'welcome' %}">
+    <img src="static/website/award.png" width="200" height="70" class="d-inline-block align-top" alt="">
+    </a></div>
+
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" 
+    aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon" ></span></button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+      <ul class="nav navbar-nav" style="text-align:right">
+          <p></p>
+          <li><a href="{% url 'welcome' %}">HomePage</a></li>
+          <p></p>
+          {% if request.user.is_authenticated %}
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+          <li><a href="{% url 'login_user' %}">Login</a></li>
+          {% endif %}
+          <p></p>
+          {% if request.user.is_authenticated %}
+          <li><a class="nav-link active" aria-current="page" href="{% url 'user-homepage' %}">{{user}}'s Profile</a></li>
+          {% else %}
+          {% endif %}
+
+      </ul>
+    </div>
+
+</nav> 
+
+
+ 

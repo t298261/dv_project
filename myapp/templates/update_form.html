@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<body>
+    <div class="card card-body">
+        {% if step1 %}
+                <form method='post'>
+                    {% csrf_token %}
+
+                    
+                <h3>Safety during a violent incident. </h3>
+                <p></p>
+                <p><b>I will not always be able to avoid violent incidents. In order to increase safety I may use a variety of strategies. I can use some of the following strategies: </b><p>
+                <p>
+                <b>A.</b> If I decide to leave, I will {{ form.box1 }}. (Practice how to get out safely. What doors, windows, elevators, stairwells, or fire escapes would you use?)
+                <p>
+                <b>B.</b> I can keep my purse and car keys ready and put them (location) {{ form.box2 }} in order to leave quickly.
+                </p>
+                <p>
+                <b>C.</b> I can tell {{ form.box3  }} about the violence and request that she or he call the police if she or he hears suspicious noises coming from my house.
+                </p>
+                <p>
+                <b>D.</b> I can teach my children how to use the telephone to contact the police, the fire department, and 911. E. I will use {{ form.box4 }} as my code with my children or my
+                friends so they can call for help.
+                </p>
+                <p>
+                <b>F.</b> If I have to leave my home, I will go to {{ form.box5  }}. (Decide this even if you don’t think there will be a next time.)
+                <p>
+                <b>G.</b> I can also teach some of these strategies to some or all of my children.
+                </p>
+                <p>
+                <b>H.</b> When I expect we’re going to have an argument, I’ll try to move to a place that is low risk, such as {{ form.box6 }}. (Try to avoid arguments in the bathroom, garage, kitchen, near weapons, or in rooms without access to an outside door.)
+                </p>
+                <p>
+                I. I will use my judgment and intuition. If the situation is very serious, I can give my partner what he/she wants to calm him/her down.
+                </p>
+
+
+                <button class='submit_button' type="submit">Submit</button>
+                </form>
+    </div>
+                {% else %}
+                <meta http-equiv="refresh" content="0; url=http://127.0.0.1:8000/form_view_error" />
+                {% endif %}
+
+
+</body>
+
+{% endblock content %}

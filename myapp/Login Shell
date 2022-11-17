@@ -1,0 +1,29 @@
+(env) ➜  dv_project python manage.py runserver                                                                            
+Watching for file changes with StatReloader            
+Performing system checks...
+                                              
+System check identified some issues:
+                                                          
+WARNINGS:                                            
+myapp.StepFive: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.mo​‌​
+dels.AutoField'.                                            
+        HINT: Configure the DEFAULT_AUTO_FIELD setting or the MyappConfig.default_auto_field attribute to point to a subcl​‌​
+ass of AutoField, e.g. 'django.db.models.BigAutoField'.
+myapp.StepFour: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.mo​‌​
+dels.AutoField'.                                                                                                          
+        HINT: Configure the DEFAULT_AUTO_FIELD setting or the MyappConfig.default_auto_field attribute to point to a subcl​‌​
+ass of AutoField, e.g. 'django.db.models.BigAutoField'.
+myapp.StepOne: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.mod​‌​
+els.AutoField'.
+        HINT: Configure the DEFAULT_AUTO_FIELD setting or the MyappConfig.default_auto_field attribute to point to a subcl​‌​
+ass of AutoField, e.g. 'django.db.models.BigAutoField'.
+myapp.StepThree: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.m​‌​
+odels.AutoField'.
+        HINT: Configure the DEFAULT_AUTO_FIELD setting or the MyappConfig.default_auto_field attribute to point to a subcl​‌​
+ass of AutoField, e.g. 'django.db.models.BigAutoField'.
+myapp.StepTwo: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.mod​‌​
+els.AutoField'.
+        HINT: Configure the DEFAULT_AUTO_FIELD setting or the MyappConfig.default_auto_field attribute to point to a subcl​‌​
+ass of AutoField, e.g. 'django.db.models.BigAutoField'.
+
+System check identified 5 issues (0 silenced).

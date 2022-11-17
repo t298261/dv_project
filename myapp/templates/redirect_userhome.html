@@ -1,0 +1,24 @@
+ 
+{% extends 'base.html' %}
+{% block content %}
+
+ <br>
+<div class="row">
+	<div class="col-md-6">
+		<div class="card card-body">
+
+			<p>A form hasn't been completed yet, please go back and complete a form first.</p>
+
+			<form action="{% url 'form_view_error' %}" method="POST" >
+
+			{% csrf_token %}
+
+			<a class= "btn btn-warning"  href="{% url 'user-homepage' %}" >Back</a>
+
+
+			</form>
+		</div>   
+	</div>
+</div>
+
+{% endblock content %}

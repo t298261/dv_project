@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<h2>Safety and my emotional health.</h2>
+
+<table class="table table-striped table-hover table-bordered">
+       <td><div class="span12" style="text-align:center">
+          <a href="{%  url 'step7'  %}">
+          <button class="wrap_button">Safety and my emotional health</button>
+          </a>
+        </div></td>
+   </tbody>  
+    <tbody>
+        <td><div class="span12" style="text-align:center ">
+          <a href="{% url 'form_view7'  %}">
+          <button class="wrap_button">View</button>
+          </a>
+        </div></td>
+   </tbody>  
+
+{% if form7 %}
+  <tbody>
+        <td><div class="span12" style="text-align:center">
+          {% for f in form7 %}
+          <a href="{% url 'editpost7' f.id %}">
+           {% endfor %}
+           <button class="wrap_button">Update</button>
+          </a>
+        </div></td>
+   </tbody> 
+  <tbody>
+        <td><div class="span12" style="text-align:center">
+          {% for f in form7 %}
+          <a href="{% url 'delete-post7' f.id %}">
+           {% endfor %}
+           <button class="wrap_button" >Delete</button>
+          </a>
+        </div></td>
+      </tr>
+   </tbody> 
+</table>
+
+{% else %}
+{% endif %}
+
+<div>
+  <a href="{% url 'user-homepage' %}" >
+  <button type="back_button" style="text-align:left" class="btn btn-dark btn-circle btn-sm" >Back to All Forms</button>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<body>
+    <div class="card card-body">
+        {% if step4 %}
+                <form method='post'>
+                    {% csrf_token %}
+
+
+            <h3>Safety with an Emergency Protective Order, Criminal Protective Order, or Temporary Restraining Order. </h3>
+            <p> <p>
+            Many abusive partners obey protection orders, but one can never be sure which violent partner will obey and which will violate protective orders. I recognize that I may need to ask the police to enforce my protective order.
+            <p> <p>
+            <b>The following are steps I can take if I want to get a protective order:</b>
+            <p> <p>
+            <b>A.</b> If I call law enforcement during an abusive incident, law enforcement may be able to provide me with an Emergency Protective Order. I understand that this order will only last for a few days (usually 5 days).
+             <p> <p>
+            <b> B.</b> If the District Attorney files criminal charges against my abusive partner there may be a Criminal Protective Order. I understand that this is a temporary order that usually will last only until the court proceedings end, even if my abusive partner is found guilty. To find out if I have a Criminal Protective Order or to get a copy of the order I can call the local District Attorney’s Office {{form4.box1}} (phone number).
+             <p> <p>
+             <b>C.</b> If I want the continued protection of a restraining order I need to pursue a Domestic Violence Restraining Order. I can call {{form4.box2}} (organization) to get help filling out the paperwork. I understand getting a Domestic Violence Restraining Order is a process that can take anywhere from days to weeks so I will make a plan to stay safe during this process.
+             <p>
+
+            <b>The following are some steps I can take to help the enforcement of my protection order:</b><p>
+             <p> <p>
+             <b>A.</b> I will keep a copy of my protection order {{form4.box3}} (location).
+             <ul>I will keep a copy on my person at all times.</ul>
+             <ul>I can give a copy to my child’s school, my roommate or to {{form4.box4}}.</ul>
+             <p> <p>
+            <b>B.</b> I can although I am not required to inform my employer; my landlord; my family; my closest friend; or 
+            {{form4.box5}}that I have a protection order in effect.
+             <p> <p>
+            <b>C.</b> If my partner destroys my protection order, I can get another copy from one of the people listed above who I have already given a copy to or I can contact the clerk’s office at the courthouse (Address:{{form4.box6}}).
+            <p>
+            <b>D.</b>If my partner violates the protection order, I can call the police and report the violation.If I need support during this process I can call an advocate at a local domestic violence agency {{form4.box7}} (phone number).
+             <p> <p>
+
+
+
+            <button class='submit_button' type="submit">Submit</button>
+            </form>
+    </div>
+            {% else %}
+
+            <meta http-equiv="refresh" content="0; url=http://127.0.0.1:8000/form_view_error" />
+            {% endif %}
+
+
+</body>
+
+
+{% endblock content %}

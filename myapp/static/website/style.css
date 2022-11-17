@@ -1,0 +1,73 @@
+
+
+h2{
+
+  color: purple;
+
+  text-align: center;
+}
+
+h3 {
+  color: purple;
+}
+
+h7 {
+  color: #925593;
+}
+
+
+
+.wrap_button{
+  background-color: #925593; /* Purple */
+  border: solid;
+  border-radius: 9px!important;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  width: 200px;
+  height: 80px;
+  font-weight: none;
+
+}
+
+.wrap_button:hover {
+    background: #9d7abd;
+    font-size: 14px;
+  }
+
+
+.submit_button{
+  background-color: #925593; /* Purple */
+  border: solid;
+  border-radius: 9px!important;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  width: 100px;
+  height: 60px;
+  font-weight: none;
+
+}
+
+
+
+/* Size of Fill In boxes on forms */
+textarea {
+    width : 30;
+    height : 75px;
+    padding:10px;  
+
+}
+
+
+.back_button
+{
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+
+
+

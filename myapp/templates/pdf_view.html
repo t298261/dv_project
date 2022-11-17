@@ -1,0 +1,19 @@
+<div>
+    <button id="btn">screenshot</button>
+</div>
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script>
+<script>
+    window.onload = function () {
+        console.log("Window is loaded")
+        document.getElementById('btn').addEventListener("click", function () {
+            html2canvas(document.getElementById('test')).then(function (canvas) {
+                document.body.appendChild(canvas);
+                var imgdata = canvas.toDataURL("image/jpg");
+                var doc = new jspdf.jsPDF();
+                doc.addImage(imgdata, "JPG", 10, 10);
+                doc.save("sample.pdf");
+            });
+        })
+    }
+</script>

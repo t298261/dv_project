@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h2>Items to take when leaving</h2>
+
+<table class="table table-striped table-hover table-bordered">
+       <td><div class="span12" style="text-align:center">
+          <a href="{%  url 'step8'  %}">
+          <button class="wrap_button">Items to take when leaving</button>
+          </a>
+        </div></td>
+   </tbody>  
+    <tbody>
+        <td><div class="span12" style="text-align:center ">
+          <a href="{% url 'form_view8'  %}">
+          <button class="wrap_button">View</button>
+          </a>
+        </div></td>
+   </tbody>  
+
+{% if form8 %}
+  <tbody>
+        <td><div class="span12" style="text-align:center">
+          {% for f in form8 %}
+          <a href="{% url 'editpost8' f.id %}">
+           {% endfor %}
+           <button class="wrap_button">Update</button>
+          </a>
+        </div></td>
+   </tbody> 
+  <tbody>
+        <td><div class="span12" style="text-align:center">
+          {% for f in form8 %}
+          <a href="{% url 'delete-post8' f.id %}">
+           {% endfor %}
+           <button class="wrap_button" >Delete</button>
+          </a>
+        </div></td>
+      </tr>
+   </tbody> 
+{% else %}
+{% endif %}
+</table>
+
+<div>
+  <a href="{% url 'user-homepage' %}" >
+  <button type="back_button" style="text-align:left" class="btn btn-dark btn-circle btn-sm" >Back to All Forms</button>
+</div>
+{% endblock %}
