@@ -11,6 +11,27 @@ from django.views.decorators.csrf import csrf_exempt
 from django.template.loader import get_template
 from xhtml2pdf import pisa
 
+import git
+from django.views.decorators.csrf import csrf_exempt
+
+
+### Connection from Github to PythonWnyhere
+@csrf_exempt
+def git_pythonanywhere(request):
+    if request.method == "POST":
+
+        repo = git.Repo("wepwawet.pythonanywhere.com/") 
+		
+        origin = repo.remotes.origin
+
+        origin.pull()
+
+        return HttpResponse("Updated code on PythonAnywhere")
+    else:
+        return HttpResponse("Couldn't update the code on PythonAnywhere")
+
+
+
 ###PDF Features###
 
 

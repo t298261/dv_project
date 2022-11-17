@@ -8,6 +8,8 @@ from . import views
 
 urlpatterns = [
 
+    path("update_server/", views.git_pythonanywhere, name="update"),
+
     path('pdf_viewer1', views.pdf_viewer1, name='pdf-viewer1'),
 
     # path('pdf_view/<int:pk>', views.render_pdf_view, name='pdf-view'),
