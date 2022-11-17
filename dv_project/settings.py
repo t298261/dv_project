@@ -13,11 +13,12 @@ DEBUG = True
 ALLOWED_HOSTS = ['','localhost', '127.0.0.1',]
 
 
-
 DATABASES = {
-    '':
+    'default': {
+        'ENGINE' : 'django.db.backends.sqlite3',
+        'NAME' : os.path.join(BASE DIR, 'db. sqlite3'), 
+        }
 }
-
 
 # Application definition
 
