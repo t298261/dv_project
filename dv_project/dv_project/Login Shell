@@ -1,0 +1,167 @@
+(env) ➜  dv_project python manage.py runserver                                                            
+Traceback (most recent call last):                                                                        
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/core/management/base.​‌​
+py", line 328, in run_from_argv                                                                           
+    self.execute(*args, **cmd_options)                                                                    
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/core/management/comma​‌​
+nds/runserver.py", line 60, in execute                     
+    super().execute(*args, **options)                              
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/core/management/base.​‌​
+py", line 369, in execute                                    
+    output = self.handle(*args, **options)                          
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/core/management/comma​‌​
+nds/runserver.py", line 67, in handle                                                                     
+    if not settings.DEBUG and not settings.ALLOWED_HOSTS:
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/conf/__init__.py", li​‌​
+ne 76, in __getattr__
+    self._setup(name)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/conf/__init__.py", li​‌​
+ne 63, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/conf/__init__.py", li​‌​
+ne 142, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/importlib/__init__.py", line 127, ​‌​
+in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 972, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 984, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'dv_forms'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/caliento_thomas/Desktop/Django/dv_project/manage.py", line 21, in <module>
+    main()
+  File "/Users/caliento_thomas/Desktop/Django/dv_project/manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/core/management/__ini​‌​
+t__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/core/management/__ini​‌​
+t__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/core/management/base.​‌​
+py", line 341, in run_from_argv
+    connections.close_all()
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/db/utils.py", line 22​‌​
+5, in close_all
+    for alias in self:
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/db/utils.py", line 21​‌​
+9, in __iter__
+    return iter(self.databases)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/utils/functional.py",​‌​
+ line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/db/utils.py", line 15​‌​
+3, in databases
+    self._databases = settings.DATABASES
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/conf/__init__.py", li​‌​
+ne 76, in __getattr__
+    self._setup(name)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/conf/__init__.py", li​‌​
+ne 63, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/conf/__init__.py", li​‌​
+ne 142, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/importlib/__init__.py", line 127, ​‌​
+in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 972, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 984, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'dv_forms'
+(env) ➜  dv_project python manage.py runserver                                                            
+Traceback (most recent call last):
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/core/management/base.​‌​
+py", line 328, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/core/management/comma​‌​
+nds/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/core/management/base.​‌​
+py", line 369, in execute
+    output = self.handle(*args, **options)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/core/management/comma​‌​
+nds/runserver.py", line 67, in handle
+    if not settings.DEBUG and not settings.ALLOWED_HOSTS:
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/conf/__init__.py", li​‌​
+ne 76, in __getattr__
+    self._setup(name)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/conf/__init__.py", li​‌​
+ne 63, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/conf/__init__.py", li​‌​
+ne 142, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/importlib/__init__.py", line 127, ​‌​
+in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 972, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 984, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'dv_project'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/caliento_thomas/Desktop/Django/dv_project/manage.py", line 21, in <module>
+    main()
+  File "/Users/caliento_thomas/Desktop/Django/dv_project/manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/core/management/__ini​‌​
+t__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/core/management/__ini​‌​
+t__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/core/management/base.​‌​
+py", line 341, in run_from_argv
+    connections.close_all()
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/db/utils.py", line 22​‌​
+5, in close_all
+    for alias in self:
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/db/utils.py", line 21​‌​
+9, in __iter__
+    return iter(self.databases)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/utils/functional.py",​‌​
+ line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/db/utils.py", line 15​‌​
+3, in databases
+    self._databases = settings.DATABASES
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/conf/__init__.py", li​‌​
+ne 76, in __getattr__
+    self._setup(name)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/conf/__init__.py", li​‌​
+ne 63, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/Users/caliento_thomas/Desktop/Django/env/lib/python3.9/site-packages/django/conf/__init__.py", li​‌​
+ne 142, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/importlib/__init__.py", line 127, ​‌​
+in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 972, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 984, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'dv_project'
+(env) ➜  dv_project 

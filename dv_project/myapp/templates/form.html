@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+
+<body>
+    <div class="card card-body" >
+		<form method='post' >
+
+			{% csrf_token %}
+
+  </label>
+
+		<h3> Step 1: Safety during a violent incident. </h3>
+
+		<p><p><b>I will not always be able to avoid violent incidents. In order to increase safety I may use a variety of strategies. I can use some of the following strategies: </b></p></p>
+		<p>
+
+
+		<b>A.</b> If I decide to leave, I will <textarea name="box1" id="id_box1"></textarea> (Practice how to get out safely. What doors, windows, elevators, stairwells, or fire escapes would you use?)
+		<p>
+		<b>B.</b> I can keep my purse and car keys ready and put them (location) <textarea name="box2" id="id_box2"></textarea> in order to leave quickly.
+		</p>
+		<p>
+		<b>C.</b> I can tell <textarea name="box3" id="id_box3"></textarea> about the violence and request that she or he call the police if she or he hears suspicious noises coming from my house.
+		</p>
+		<p>
+		<b>D.</b> I can teach my children how to use the telephone to contact the police, the fire department, and 911. E. I will use <textarea name="box4" id="id_box4"></textarea> as my code with my children or my
+		friends so they can call for help.
+		</p>
+		<p>
+		<b>F.</b> If I have to leave my home, I will go to <textarea name="box5" id="id_box5"></textarea>. (Decide this even if you don’t think there will be a next time.)
+		<p>
+		<b>G.</b> I can also teach some of these strategies to some or all of my children.
+		</p>
+		<p>
+		<b>H.</b> When I expect we’re going to have an argument, I’ll try to move to a place that is low risk, such as <textarea name="box6" id="id_box6"></textarea>. (Try to avoid arguments in the bathroom, garage, kitchen, near weapons, or in rooms without access to an outside door.)
+		</p>
+		<p>
+		<b>I.</b> I will use my judgment and intuition. If the situation is very serious, I can give my partner what he/she wants to calm him/her down.
+		</p>
+
+		<button class='submit_button' type="submit">Submit</button>
+	</label>
+		</form>
+	</div>
+  </textarea>
+
+</body>
+
+
+{% endblock content %}

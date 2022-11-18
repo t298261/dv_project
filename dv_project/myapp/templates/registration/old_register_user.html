@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1>Register</h1>
+<br></br>
+<form action="{% url 'user-homepage' %}" method="POST">
+	{% csrf_token %}
+
+	{{ form }}
+
+	<input type="submit" value="Submit" class=" btn btn-secondary">
+</form>
+
+{% endblock %}

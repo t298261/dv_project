@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<body>
+    <div class="card card-body">
+        <form method='post'>
+            {% csrf_token %}
+
+        <h3>Items to take when leaving.</h3>
+
+        <p>When leaving it is important to take certain items if possible. Beyond this, folks sometimes give an extra copy of papers and an extra set of clothing to a friend just in case they have to leave quickly.</p>
+
+        <p>Money: Even if I never worked, I can take money from jointly held savings and checking accounts. If I do not take this money, my abusive partner can legally take the money and close the accounts.</p>
+
+       <p><b>When I leave the most important things for me to take are:</b></p>
+
+
+        <ul>
+            <li>Identification for myself</li>
+            <li>Mine and my Childs birth certificates and Social Security cards</li>
+            <li>Money</li>
+            <li>School and vaccination records</li>
+            <li>Checkbook, ATM card; Credit Cards</li>
+            <li>Spare Keys - House, Car, Office</li>
+            <li>Driver’s License and Registration</li>
+            <li>Medications;</li>
+            <li>Copy of Protection Order</li>
+            <li>Welfare Identification, Work Permits, Green Cards </li>
+        </ul>
+
+    
+        <p>If there is time, the other items might be taken, or stored outside the home. These items might best be placed in one location, so that if we have to leave in a hurry, I can grab them quickly.</p>
+
+        <p><b>Those items include: </b></p>
+            <ul>
+                <li>Passport(s)</li>
+                <li>Divorce Papers</li>
+                <li>Money</li>
+                <li>Medical Records - for all family members</li>
+                <li>Lease/Rental agreement</li>
+                <li>House Deed</li>
+                <li>Mortgage Payment Book</li>
+                <li>Bank books</li>
+                <li>Address Book</li>
+                <li>Pictures</li>
+                <li>Jewelry</li>
+                <li>Children’s favorite toys and/or blankets</li>
+                <li>Items of special sentimental value.</li>
+            </ul>
+        , 
+        
+        <p><b>Telephone numbers I need to know:</b></p>
+        <ul>
+            <p><li>Catalyst Domestic Violence Services 24 hour hotline 1.800.895.8476</li></p>
+            <p><li>Police/sheriff’s department (local) - {{form.box1}}.</li></p>
+            <p><li>911 or {{form.box2}}</li></p>
+            <p><li>Police/sheriff’s department (work): {{form.box3}}</li></p>
+            <p><li>Police/sheriff’s department (school) {{form.box4}}</li></p> 
+            <p><li>Prosecutor’s office {{form.box5}}</li></p>
+            <p><li>Local Domestic Violence Agency {{form.box6}}</li></p>
+        </ul>
+        <p><li>National Domestic Violence Hotline: 800-799-SAFE (7233) 800-787-3224 (TTY)
+        www.ndvh.org</li></p>
+
+       <p><b>Other:</b></p>
+
+        <ul>
+            <p><li>County where protection order was issued: <textarea name="box7" id="id_box7"></textarea></li> </p>
+
+           <p><li> I will keep this document in a safe place and out of the reach of my potential attacker.</li></p>
+        </ul>
+
+
+        <button class='submit_button' type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+
+{% endblock content %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<body>
+   <div class="card card-body">
+       {% if step3 %}
+          {% for st in step3 %}
+
+           <h3>Safety in my own residence.</h3>
+
+              <p></p>
+              There are many things that a victim of domestic violence can do to increase their safety in their own residence. It may be impossible to do everything at once, but safety measures can be added step by step.
+              <p></p>
+
+              <b>Safety measures I can use:</b>
+              <p>
+              <p><b>A.</b> I can change the locks on my doors and windows as soon as possible.</p>
+              <p><b>B.</b> I can replace wooden doors with steel/metal doors.</p>
+              <p>
+              <b>C.</b> I can install security systems including additional locks, window bars, and poles to wedge against doors, an electronic system, etc.
+              <p>
+              <b>D.</b> I can purchase rope ladders to be used for escape from second floor windows.
+              <p>
+              <b>E.</b> I can install smoke detectors and fire extinguishers for each floor of my house/apartment.
+              <p>
+              <b>F.</b> I can install an outside lighting system that activates when a person is close to the house.
+              <p>
+              <b>G.</b> I will teach my children how to make a collect call to me and to <b>{{st.box1}}</b> (name of friend,
+                etc.) in the event that my partner takes the children.
+              <p>
+              <b>H.</b> I will tell the people who take care of my children which people have permission to pick up my children and that my partner is not permitted to do so. The people I will inform about pick-up permission include:
+              </p>
+
+             <b>{{st.box2}}</b> (name of school) <p><p>
+             <b>{{st.box3}}</b> (name of babysitter)<p>
+             <b>{{st.box4}}</b> (name of teacher)   <p>
+             <b>{{st.box5}}</b> (name of Sunday-school teacher) <p>
+             <b>{{st.box6}}</b> (name[s] of others)
+
+             <p></p>
+             <p>
+
+              <b>I.</b> I can inform <b>{{st.box7}}</b>(neighbor) and <b>{{st.box8}}</b>(friend) that my partner no longer resides with me and that they should call the police if he is observed near my residence.
+
+
+
+           {% endfor %}
+   </div>
+           {% else %}
+               <meta http-equiv="refresh" content="0; url=https://afternoon-reaches-22379.herokuapp.com/form_view_error" />
+          {% endif %}
+
+
+</body>
+
+{% endblock content %}

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+<!--Row -->
+
+
+
+{% block content %}
+
+<h2>Safety when preparing to leave.</h2>
+
+<table class="table table-striped table-hover table-bordered">
+
+       <td><div class="span12" style="text-align:center">
+          <a href="{%  url 'step2'  %}">
+          <button class="wrap_button">Preparing to leave</button>
+          </a>
+        </div></td>
+   </tbody>  
+
+   <tbody>
+        <td><div class="span12" style="text-align:center">
+          <a href="{% url 'form_view2'  %}">
+          <button class="wrap_button">View</button>
+          </a>
+        </div></td>
+   </tbody>  
+
+{% if form2 %}
+  <tbody>
+        <td><div class="span12" style="text-align:center">
+          {% for f in form2 %}
+          <a href="{% url 'editpost2' f.id %}">
+           {% endfor %}
+           <button class="wrap_button">Update</button>
+          </a>
+        </div></td>
+   </tbody> 
+
+  <tbody>
+        <td><div class="span12" style="text-align:center">
+          {% for f in form2 %}
+          <a href="{% url 'delete-post2' f.id %}">
+           {% endfor %}
+           <button class="wrap_button" >Delete</button>
+          </a>
+        </div></td>
+      </tr>
+   </tbody> 
+</table>
+{% else %}
+{% endif %}
+
+<div>
+  <a href="{% url 'user-homepage' %}" >
+  <button type="back_button" style="text-align:left" class="btn btn-dark btn-circle btn-sm" >Back to All Forms</button>
+</div>
+
+
+{% endblock %}

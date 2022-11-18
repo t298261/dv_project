@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<body>
+    <div class="card card-body">
+        {% if step2 %}
+
+                <form method='POST'>
+                    {% csrf_token %}
+
+                
+                    <h3>Safety when preparing to leave. </h3>
+                    <p></p>
+
+                    Victims of domestic violence frequently leave the residence they share with the abusive partner. Leaving must be done with a careful plan in order to increase safety. Abusers often strike back when they believe that a victim is leaving a relationship.
+                    <p>
+                    <p><b>I can use some or all of the following strategies:</b></p>
+                    <p>
+                    <b>A.</b> I will leave money and an extra set of keys with {{ form2.box1 }} so I can leave quickly.
+                    </p>
+                   <b>B.</b> I will keep copies of important documents or keys at {{form2.box2}}.
+                    <p>
+                    <b>C.</b> I will open a savings account by {{ form2.box3 }}, to increase my independence.
+                    </p>
+                    <b>D.</b> Other things I can do to increase my independence include: {{ form2.box4 }}
+                    <p><p>
+                    <b>E.</b> I can keep change for phone calls on me at all times. I understand that if I use my telephone credit card, the following month’s phone bill will show my abuser those numbers I called after I left. To keep my phone communications confidential, I must either use coins, or I might ask to use a friends phone card for a limited time when I first leave.
+                    </p>
+                    <b>F.</b> I will check with {{ form2.box5 }} and {{ form2.box6 }} to see who would be able to let me stay with them or lend me some money.
+                    <p><p>
+                    <b>G.</b> I can leave extra clothes or money with {{ form2.box7 }}.
+                    <p>
+                    <b>H.</b> I will sit down and review my safety plan every {{ form2.box8 }} in order to plan the safest way to leave the residence. {{ form2.box9 }} (domestic violence advocate or friends name) has agreed to help me review this plan.
+                    </p>
+                   <b>I.</b> I will rehearse my escape plan and, as appropriate, practice it with my children.
+                    </p>
+
+                <button class='submit_button' type="submit">Submit</button>
+                </form>
+    </div>
+                {% else %}
+                <meta http-equiv="refresh" content="0; url=http://127.0.0.1:8000/form_view_error" />
+                {% endif %}
+
+
+</body>
+
+
+{% endblock content %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<body>
+    <div class="card card-body">
+        {% if step5 %}
+            <form method='post'>
+                {% csrf_token %}
+
+            <h3>Safety on the job and in public.</h3>
+            <p>
+            Each victim of domestic violence must decide if and when they will tell others that their partner has abused them and that they may be at continued risk. Friends, family, and co-workers can help to protect victims of domestic violence. Each victim of domestic violence should carefully consider which people to invite to help secure their safety.
+            <p>
+            I might do any or all of the following:
+
+            <b>A.</b> I can inform my boss, the security supervisor, and {{form5.box1}} at work.
+            <p>
+            <b>B.</b> I can ask {{form5.box2}} to help me screen my telephone calls at work.
+            <p>
+            <b>C.</b> When leaving work, I can {{form5.box3}}.
+            <p>
+            <b>D.</b> If I have a problem while driving home, I can {{form5.box4}}.
+            <p>
+            <b>E.</b> If I use public transit, I can {{form5.box5}}.
+            <p>
+            <b>F.</b> I will go to different grocery stores and shopping malls to conduct my business and shop at hours that are different from those I kept when residing with my abusive partner.
+            <p>
+             <b>G.</b> I can use a different bank and go at hours that are different from those kept when residing with my abusive partner.
+
+             <p>
+            <button class='submit_button' type="submit">Submit</button>
+            </form>
+        </div>
+        {% else %}
+        <meta http-equiv="refresh" content="0; url=http://127.0.0.1:8000/form_view_error" />
+        {% endif %}
+
+
+</body>
+
+
+{% endblock content %}

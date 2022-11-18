@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<body>
+<br>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="card card-body">
+
+
+			<p>Are you are you want to delete this form?</p>
+
+			<form action="{% url 'delete-post' form.id %}" method="POST" >
+
+			{% csrf_token %}
+
+			<a class= "btn btn-warning"  href="{% url 'user-homepage' %}" >Cancel</a>&emsp;
+
+			<button  type="submit" class="btn btn-danger" name="confirm">Delete</button>
+
+			</form>
+		</div>   
+
+	</div>
+</div>
+</body>
+
+
+
+{% endblock content %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<body>
+    <div class="card card-body">
+        {% if step7 %}
+            {% for st in step7 %}
+
+            <h3>Safety and my emotional health. </h3>
+            <p></p>
+            <p>The experience of being abused and verbally degraded by partners is usually exhausting and emotionally draining. The process of building a new life takes much courage and incredible energy.</p>
+
+            <p><b>To conserve my emotional energy and resources and to avoid hard emotional times, I can do some of the following:</b></p>
+
+            <p><b>A.</b> If I feel down and am returning to a potentially abusive situation, I can <b>{{st.box1}}</b>.</p>
+
+            <p><b>B.</b> When I have to communicate with my partner in person or by telephone, I can <b>{{st.box2}}</b>.</p>
+            <p><b>C.</b> I will try to use “I can ... ” statements with myself and be assertive with others.</p>
+            <p><b>D.</b> I can tell myself, “<b>{{st.box3}}</b>” whenever I feel others are trying to control or abuse me.</p>
+            <p><b>E.</b> I can read <b>{{st.box4}}</b> to help me feel stronger.</p>
+            <p><b>F.</b> I can call <b>{{st.box5}}</b> and <b>{{st.box6}}</b> for support.</p>
+            <p><b>G.</b> I can attend workshops and support groups at the domestic violence program or <b>{{st.box7}}</b> to gain support and strengthen relationships.</p>
+
+
+
+             {% endfor %}
+             {% else %}
+                <meta http-equiv="refresh" content="0; url=https://afternoon-reaches-22379.herokuapp.com/form_view_error" />
+             {% endif %}
+
+    </div>
+</body>
+
+{% endblock content %}

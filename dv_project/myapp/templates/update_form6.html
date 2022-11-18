@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<body>
+    <div class="card card-body">
+        {% if step6 %}
+            <form method='post'>
+                {% csrf_token %}
+
+            <h3>Safety and drug or alcohol use.</h3>
+            <p></p>
+            <p> Many victims of domestic violence use drugs or alcohol to cope with the trauma they are experienceing. The legal outcomes of using illegal drugs can be very hard and may hurt relationships with children and family or may put the victim at a disadvantage in other legal actions with his or her abusive partner. Therefore, carefully consider the potential cost of the use of illegal drugs. Beyond this, the use of alcohol or other drugs can reduce awareness and ability to act quickly to protect oneself from an abusive partner. Specific safety plans must be made concerning drugs or alcohol use.</p>
+
+            <p><b>If drug or alcohol use has occurred in my relationship with my abusive partner, I can enhance my safety by some or all of the following:</b></p>
+
+            <p><b>A.</b> If I am going to use, I can do so in a safe place and with people who understand the risk of violence and are committed to my safety.</p>
+
+           <p><b>B.</b> If my partner is using, I can {{form6.box1}} and/or {{form6.box2}}.</p>
+
+            <p><b>C.</b> To safeguard my children I might {{form6.box3}}.</p>
+
+
+             <p>
+            <button class='submit_button' type="submit">Submit</button>
+            </form>
+        </div>
+        {% else %}
+            <meta http-equiv="refresh" content="0; url=http://127.0.0.1:8000/form_view_error" />
+        {% endif %}
+
+
+</body>
+
+
+{% endblock content %}
