@@ -18,7 +18,7 @@ DATABASES = {
         'ENGINE' : 'django.db.backends.sqlite3',
         'NAME' : os.path.join(BASE DIR, 'db. sqlite3'), 
         }
-}
+}dsjfiodsfa
 
 # Application definition
 
