@@ -8,27 +8,30 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 
-from django.template.loader import get_template
-from xhtml2pdf import pisa
 
-import git
-from django.views.decorators.csrf import csrf_exempt
+
+
+
+
+
+
+
 
 
 ### Connection from Github to PythonWnyhere
-@csrf_exempt
-def git_pythonanywhere(request):
-    if request.method == "POST":
+# @csrf_exempt
+# def git_pythonanywhere(request):
+#     if request.method == "POST":
 
-        repo = git.Repo("wepwawet.pythonanywhere.com/") 
+#         repo = git.Repo("wepwawet.pythonanywhere.com/") 
 		
-        origin = repo.remotes.origin
+#         origin = repo.remotes.origin
 
-        origin.pull()
+#         origin.pull()
 
-        return HttpResponse("Updated code on PythonAnywhere")
-    else:
-        return HttpResponse("Couldn't update the code on PythonAnywhere")
+#         return HttpResponse("Updated code on PythonAnywhere")
+#     else:
+#         return HttpResponse("Couldn't update the code on PythonAnywhere")
 
 
 
@@ -36,32 +39,6 @@ def git_pythonanywhere(request):
 
 
 
-def pdf_viewer1(request):
-	"""View for user to see completed form"""
-	step1 = StepOne.objects.filter(user=request.user) # user can only view theire form. request user and filter the objects/forms for there step oneform.
-	return render(request,'pdf_view.html',{'step1': step1})
-
-
-# def render_pdf_view(request, pk):
-# 	model = StepOne.objects.filter(user=request.user)
-# 	template_name = 'form_view.html'
-# 	models_key = get_object_or_404(model, pk=pk)
-
-	"""Creates a pdf"""
-	# template_path = 'form_view.html'
-	# context = {models_key: 'models_key'}
-	# #Create Django Response Object
-	# response = HttpResponse(content_type='application/pdf')
-	# #display it:
-	# response['Content-Disposition'] =  'filename="form_view.pdf"'
-	# #find the template and render it.
-	# template = get_template(template_path)
-	# html = template.render(context)
-
-	# #create a pdf
-	# pisa_status = pisa.CreatePDF(
-	# 	html, dest=response)
-	# return response
 
 
 

@@ -43,7 +43,24 @@
           </a>
         </div></td>
       </tr>
-   </tbody> 
+   </tbody>
+
+   <tbody>
+    <td><div class="span12" style="text-align:center">
+        <a href="{% url 'generate-pdf4' %}">
+        <button class="wrap_button" >Print PDF</button>
+        </a>
+        </div></td>
+    </tbody>
+
+    <tbody>
+      <td><div class="span12" style="text-align:center">
+        <a href="{% url 'download-pdf4' %}">
+        <button class="wrap_button" >Download PDF</button>
+        </a>
+      </div></td>
+    </tbody>
+
 {% else %}
 {% endif %}
 </table>

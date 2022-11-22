@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Title</title>
+        <style type="text/css">
+            body {
+                font-weight: 200;
+                font-size: 14px;
+            }
+            .header {
+                font-size: 20px;
+                font-weight: 100;
+                text-align: center;
+                color: #007cae;
+            }
+            .title {
+                font-size: 22px;
+                font-weight: 100;
+               /* text-align: right;*/
+               padding: 10px 20px 0px 20px;  
+            }
+            .title span {
+                color: #007cae;
+            }
+            .details {
+                padding: 10px 20px 0px 20px;
+                text-align: left !important;
+                /*margin-left: 40%;*/
+            }
+            .hrItem {
+                border: none;
+                height: 1px;
+                /* Set the hr color */
+                color: #333; /* old IE */
+                background-color: #fff; /* Modern Browsers */
+            }
+        </style>
+    </head>
+    <body>
+        <div class='wrapper'>
+            <div class='header'>
+                <p class='title'>Step 1: Safety during a violent incident. </p>
+            </div>
+        <div>
+        <div class='details'>
+			{% for st in step1 %}
+
+
+			<p></p>
+
+			<p><b>I will not always be able to avoid violent incidents. In order to increase safety I may use a variety of strategies. I can use some of the following strategies:</b> </p>
+			<p>
+			<b>A.</b> If I decide to leave, I will <b>{{ st.box1 }}</b>. (Practice how to get out safely. What doors, windows, elevators, stairwells, or fire escapes would you use?)
+			<p>
+            <p>
+            <b>B.</b> I can keep my purse and car keys ready and put them (location) <b>{{ st.box2 }}</b> in order to leave quickly.
+            </p>
+            <p>
+            <b>C.</b> I can tell <b>{{ st.box3 }}</b> about the violence and request that she or he call the police if she or he hears suspicious noises coming from my house.
+            </p>
+            <p>
+            <b>D.</b> I can teach my children how to use the telephone to contact the police, the fire department, and 911. E. I will use <b>{{ st.box4 }}</b> as my code with my children or my
+            friends so they can call for help.
+            </p>
+            <p>
+            <b>F.</b> If I have to leave my home, I will go to <b>{{ st.box5  }}</b>. (Decide this even if you dont think there will be a next time.)
+            <p>
+            <b>G.</b> I can also teach some of these strategies to some or all of my children.
+			</p>
+			<p>
+            <b>H.</b> When I expect we are going to have an argument, I will try to move to a place that is low risk, such as <b>{{ st.box6 }}</b>. (Try to avoid arguments in the bathroom, garage, kitchen, near weapons, or in rooms without access to an outside door.)
+			</p>
+			<p>
+            <b>I.</b> I will use my judgment and intuition. If the situation is very serious, I can give my partner what he/she wants to calm him/her down.
+			</p>
+
+            {% endfor %}
+
+
+            <hr class='hrItem' />
+        </div>
+    </div>
+    </body>
+</html>

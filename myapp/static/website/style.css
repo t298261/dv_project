@@ -70,4 +70,24 @@ textarea {
 
 
 
+.cell {
+  display: table-cell;
+  background: yellow;
+  vertical-align: middle;
+  text-align: center;
+}
 
+
+
+.tab1 {
+  tab-size: 2;
+  }
+
+
+  
+  .tab4 {
+  tab-size: 8;
+  }
+
+
+.tab2 { margin-left: 40px; }

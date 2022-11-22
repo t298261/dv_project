@@ -17,15 +17,17 @@
         </div></td>
    </tbody>  
 
-   <tbody>
-        <td><div class="span12" style="text-align:center">
-          <a href="{% url 'form_view2'  %}">
-          <button class="wrap_button">View</button>
-          </a>
-        </div></td>
-   </tbody>  
 
 {% if form2 %}
+
+  <tbody>
+    <td><div class="span12" style="text-align:center">
+      <a href="{% url 'form_view2'  %}">
+      <button class="wrap_button">View</button>
+      </a>
+    </div></td>
+  </tbody>  
+
   <tbody>
         <td><div class="span12" style="text-align:center">
           {% for f in form2 %}
@@ -46,6 +48,24 @@
         </div></td>
       </tr>
    </tbody> 
+
+    <tbody>
+      <td><div class="span12" style="text-align:center">
+        <a href="{% url 'generate-pdf2' %}">
+        <button class="wrap_button" >Print PDF</button>
+        </a>
+      </div></td>
+    </tbody>
+
+    <tbody>
+      <td><div class="span12" style="text-align:center">
+        <a href="{% url 'download-pdf2' %}">
+         <button class="wrap_button" >Download PDF</button>
+        </a>
+      </div></td>
+  </tbody>
+  
+
 </table>
 {% else %}
 {% endif %}

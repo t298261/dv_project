@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <style type="text/css">
+            body {
+                font-weight: 200;
+                font-size: 14px;
+            }
+            .header {
+                font-size: 20px;
+                font-weight: 100;
+                text-align: center;
+                color: #007cae;
+            }
+            .title {
+                font-size: 22px;
+                font-weight: 100;
+               /* text-align: right;*/
+               padding: 10px 20px 0px 20px;  
+            }
+            .title span {
+                color: #007cae;
+            }
+            .details {
+                padding: 10px 20px 0px 20px;
+                text-align: left !important;
+                /*margin-left: 40%;*/
+            }
+            .hrItem {
+                border: none;
+                height: 1px;
+                /* Set the hr color */
+                color: #333; /* old IE */
+                background-color: #fff; /* Modern Browsers */
+            }
+        </style>
+    </head>
+    <body>
+        <div class='wrapper'>
+            <div class='header'>
+                <p class='title'>Safety in my own residence.</p>
+            </div>
+        <div>
+        <div class='details'>
+            {% for st in step %}
+
+            <p></p>
+            There are many things that a victim of domestic violence can do to increase their safety in their own residence. It may be impossible to do everything at once, but safety measures can be added step by step.
+            <p></p>
+
+            <b>Safety measures I can use:</b>
+            <p>
+            <p><b>A.</b> I can change the locks on my doors and windows as soon as possible.</p>
+            <p><b>B.</b> I can replace wooden doors with steel/metal doors.</p>
+            <p>
+            <b>C.</b> I can install security systems including additional locks, window bars, and poles to wedge against doors, an electronic system, etc.
+            <p>
+            <b>D.</b> I can purchase rope ladders to be used for escape from second floor windows.
+            <p>
+            <b>E.</b> I can install smoke detectors and fire extinguishers for each floor of my house/apartment.
+            <p>
+            <b>F.</b> I can install an outside lighting system that activates when a person is close to the house.
+            <p>
+            <b>G.</b> I will teach my children how to make a collect call to me and to <b>{{st.box1}}</b> (name of friend,
+              etc.) in the event that my partner takes the children.
+            <p>
+            <b>H.</b> I will tell the people who take care of my children which people have permission to pick up my children and that my partner is not permitted to do so. The people I will inform about pick-up permission include:
+            </p>
+
+           <b>{{st.box2}}</b> (name of school) <p><p>
+           <b>{{st.box3}}</b> (name of babysitter)<p>
+           <b>{{st.box4}}</b> (name of teacher)   <p>
+           <b>{{st.box5}}</b> (name of Sunday-school teacher) <p>
+           <b>{{st.box6}}</b> (name[s] of others)
+
+           <p></p>
+           <p>
+
+            <b>I.</b> I can inform <b>{{st.box7}}</b>(neighbor) and <b>{{st.box8}}</b>(friend) that my partner no longer resides with me and that they should call the police if he is observed near my residence.
+
+            {% endfor %}
+
+            <hr class='hrItem' />
+        </div>
+    </div>
+    </body>
+</html>

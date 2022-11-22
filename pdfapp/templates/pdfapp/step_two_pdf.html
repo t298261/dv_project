@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <style type="text/css">
+            body {
+                font-weight: 200;
+                font-size: 14px;
+            }
+            .header {
+                font-size: 20px;
+                font-weight: 100;
+                text-align: center;
+                color: #007cae;
+            }
+            .title {
+                font-size: 22px;
+                font-weight: 100;
+               /* text-align: right;*/
+               padding: 10px 20px 0px 20px;  
+            }
+            .title span {
+                color: #007cae;
+            }
+            .details {
+                padding: 10px 20px 0px 20px;
+                text-align: left !important;
+                /*margin-left: 40%;*/
+            }
+            .hrItem {
+                border: none;
+                height: 1px;
+                /* Set the hr color */
+                color: #333; /* old IE */
+                background-color: #fff; /* Modern Browsers */
+            }
+        </style>
+    </head>
+    <body>
+        <div class='wrapper'>
+            <div class='header'>
+                <p class='title'>Safety when preparing to leave.</p>
+            </div>
+        <div>
+        <div class='details'>
+            {% for st in step %}
+
+            <p></p>
+             Victims of domestic violence frequently leave the residence they share with the abusive partner. Leaving must be done with a careful plan in order to increase safety. Abusers often strike back when they believe that a victim is leaving a relationship.
+             <p>
+             <p><b>I can use some or all of the following strategies:</b></p>
+             <p>
+             <b>A.</b> I will leave money and an extra set of keys with <b>{{ st.box1 }}</b> so I can leave quickly.
+             </p><p>
+             <b>B.</b> I will keep copies of important documents or keys at <b>{{ st.box2 }}</b>.
+             <p>
+             <b>C.</b> I will open a savings account by <b>{{ st.box3 }}</b>, to increase my independence.
+             <p>
+             <b>D.</b> Other things I can do to increase my independence include: <b>{{ st.box4 }}</b>.
+             <p>
+             <b>E.</b> I can keep change for phone calls on me at all times. I understand that if I use my telephone credit card, the following month’s phone bill will show my abuser those numbers I called after I left. To keep my phone communications confidential, I must either use coins, or I might ask to use a friends phone card for a limited time when I first leave.
+             </p><p>
+             <b>F.</b> I will check with <b>{{ st.box5 }}</b> and <b>{{ st.box6 }}</b> to see who would be able to let me stay with them or lend me some money.
+             <p>
+             <b>G.</b> I can leave extra clothes or money with <b>{{ st.box7 }}</b>.
+             <p>
+             <b>H.</b> I will sit down and review my safety plan every <b>{{ st.box8 }}</b> in order to plan the safest way to leave the residence. <b>{{ st.box9 }}</b> (domestic violence advocate or friends name) has agreed to help me review this plan.
+             <p>
+             <b>I.</b> I will rehearse my escape plan and, as appropriate, practice it with my children.
+             </p>
+
+            {% endfor %}
+
+            <hr class='hrItem' />
+        </div>
+    </div>
+    </body>
+</html>

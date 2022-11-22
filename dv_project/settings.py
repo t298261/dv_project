@@ -1,7 +1,6 @@
 
 import os
 from pathlib import Path
-import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -10,16 +9,15 @@ SECRET_KEY = 'zg&-*6rqdiqyu4fnq26-w%4)uw@nvlx@9o85)+&z(aaqxy^=_n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['','localhost', '127.0.0.1',]
+ALLOWED_HOSTS = ['wepwawet.pythonanywhere.com','localhost', '127.0.0.1',]
 
 
 DATABASES = {
     'default': {
         'ENGINE' : 'django.db.backends.sqlite3',
-        'NAME' : os.path.join(BASE DIR, 'db. sqlite3'), 
+        'NAME' : os.path.join(BASE_DIR, 'db. sqlite3'), 
         }
-}dsjfiodsfaclear
-
+}
 # Application definition
 
 INSTALLED_APPS = [
@@ -30,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp.apps.MyappConfig',
+    'pdfapp.apps.PdfAppConfig',
 ]
 
 
@@ -49,7 +48,7 @@ ROOT_URLCONF = 'dv_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates" )],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -86,6 +85,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -105,16 +106,7 @@ USE_TZ = True
  
 
 STATIC_URL = '/static/'
-# STATICFILES_STORAGE = (os.path.join(BASE_DIR, 'static'),)
-django_heroku.settings(locals())
 
-if DEBUG:
-   STATICFILES_DIRS = [
-   os.path.join(BASE_DIR, 'static'),
-   ]
-#when you change environemnt to production, STATIC_ROOT should be given. 
-else:
-   STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 CRISPY_TEMPLATE_PACK="bootstrap4"
 
